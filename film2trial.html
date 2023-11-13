@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ Watson</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main>
+
+        <!-- top -->
+        <a class='top' href='https://www.google.com'></a>
+
+        <!-- middle -->
+        <div class='container'>
+            <a class='left' href='https://www.google.com'></a>
+            <mux-player
+            accent-color="#BC0202"
+            stream-type="on-demand"
+            playback-id="Zm1PwSwatAt871AiQmUr1uM7XjTGgmLskVKp3txqpZU"
+            metadata-video-title="Placeholder (optional)"
+            metadata-viewer-user-id="Placeholder (optional)"
+            
+            onclick={event.stopPropagation()}
+    
+            ></mux-player>
+            
+            <a class='right' href='https://www.google.com'></a>
+        </div>
+        <aside class='controls'>
+            <button><h3>></h3></button>
+        </aside>
+        <!-- bottom -->
+        <a class='bottom' href='https://www.google.com'></a>
+            
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"></script>
+
+    <script>const muxPlayer = document.querySelector('mux-player');
+
+        muxPlayer.addEventListener("ended", (event) => {
+        console.log(
+        "Video stopped either because playback finished or no further data is available.", event
+        );
+        });
+        
+        muxPlayer.onended = function() {
+        // alert("The video has ended");
+        window.location.href = 'https://www.google.com'
+        }
+        </script>
+</body>
+</html>

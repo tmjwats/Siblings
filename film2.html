@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ Watson</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main>
+
+        <!-- top -->
+        <a class='top' href='2text.html'></a>
+
+        <!-- middle -->
+        <div class='container'>
+            <a class='left' href='2text.html'></a>
+            <mux-player
+            accent-color="#BC0202"
+            stream-type="on-demand"
+            playback-id="Zm1PwSwatAt871AiQmUr1uM7XjTGgmLskVKp3txqpZU"
+            metadata-video-title="Placeholder (optional)"
+            metadata-viewer-user-id="Placeholder (optional)"
+            poster="black.png"
+            
+            onclick={event.stopPropagation()}
+    
+            ></mux-player>
+            
+            <a class='right' href='2text.html'></a>
+        </div>
+        <aside class='controls'>
+            <button><h3 class="hidden2"><a href="index.html"><</a></h3></button>
+        </aside>
+        <!-- bottom -->
+        <a class='bottom' href='2text.html'></a>
+            
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"></script>
+
+    <script>const muxPlayer = document.querySelector('mux-player');
+
+        muxPlayer.addEventListener("ended", (event) => {
+        console.log(
+        "Video stopped either because playback finished or no further data is available.", event
+        );
+        });
+        
+        muxPlayer.onended = function() {
+        // alert("The video has ended");
+        window.location.href = '2text.html'
+        }
+        </script>
+</body>
+</html>
